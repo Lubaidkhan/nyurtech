@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "75c5b4b1-2899-46fb-a24a-0dcc3fe3f366",
+		"name": "Nyurtech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23542780"
+	},
+	"item": [
+		{
+			"name": "Auth Module URLs",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"lubaid.khan@girnarcare.com\",\n    \"password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"kyle@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":\"123abc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/auth/reset-password/634eb08922d45dd2943ee30d/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt5bGVAZ21haWwuY29tIiwiaWQiOiI2MzRlYjA4OTIyZDQ1ZGQyOTQzZWUzMGQiLCJpYXQiOjE2NjYxMDE0NDEsImV4cCI6MTY2NjEwMjM0MX0.v92KQmdxi3_t0rkuilVC5BMGzHOgpLsXju44hcnyyYE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auth",
+								"reset-password",
+								"634eb08922d45dd2943ee30d",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt5bGVAZ21haWwuY29tIiwiaWQiOiI2MzRlYjA4OTIyZDQ1ZGQyOTQzZWUzMGQiLCJpYXQiOjE2NjYxMDE0NDEsImV4cCI6MTY2NjEwMjM0MX0.v92KQmdxi3_t0rkuilVC5BMGzHOgpLsXju44hcnyyYE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignUp",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNTEwMzMyZDM1OGRmYWZlYmQ4NWQxMyIsImVtYWlsIjoicmFtYXdhdGFyLnNhaW5pQGdpcm5hcnNvZnQuY29tIiwidXNlclR5cGUiOiJNYW5hZ2VyIiwibmFtZSI6IlJhbWF3dGFyIFNhaW5pIiwicGVybWlzc2lvbnMiOnsidXNlciI6eyJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwibGlzdCI6ZmFsc2UsImRlbGV0ZSI6ZmFsc2V9LCJwcm9wZXJ0eSI6eyJjcmVhdGUiOmZhbHNlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6ZmFsc2UsImxpc3QiOmZhbHNlfX0sImlhdCI6MTY2NjMzNzc5OSwiZXhwIjoxNjY2NDI0MTk5fQ.rI3Yas9_sXGrHUGs7YPckbscusmMC0X_sYcGTTzxTBw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Fawzan\",\n    \"email\":\"fawzan123@gmail.com\",\n    \"password\":\"qwerty\"\n\n     \n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Module URLs",
+			"item": [
+				{
+					"name": "Get all users by filterPaginate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmNjN2NiNTQ3ZmFjNjJmNDRkNzU5NCIsImVtYWlsIjoiZmF3emFuMTIzQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoiQWRtaW4iLCJuYW1lIjoiRmF3emFuIiwicGVybWlzc2lvbnMiOnsidXNlciI6eyJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwibGlzdCI6dHJ1ZSwiZGVsZXRlIjp0cnVlfSwicHJvcGVydHkiOnsiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwibGlzdCI6dHJ1ZX19LCJpYXQiOjE2NjgwNzM1NzEsImV4cCI6MTY2ODE1OTk3MX0.Gf6plXjDIVx4anG8pMC_FvHnhq32l0ePG75FLx_noSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmNjN2NiNTQ3ZmFjNjJmNDRkNzU5NCIsImVtYWlsIjoiZmF3emFuMTIzQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoiQWRtaW4iLCJuYW1lIjoiRmF3emFuIiwicGVybWlzc2lvbnMiOnsidXNlciI6eyJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwibGlzdCI6dHJ1ZSwiZGVsZXRlIjp0cnVlfSwicHJvcGVydHkiOnsiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwibGlzdCI6dHJ1ZX19LCJpYXQiOjE2NjgwNzM1NzEsImV4cCI6MTY2ODE1OTk3MX0.Gf6plXjDIVx4anG8pMC_FvHnhq32l0ePG75FLx_noSw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"page\":0,\n    \"length\":5,\n     \"userType\":\"Admin\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmNjN2NiNTQ3ZmFjNjJmNDRkNzU5NCIsImVtYWlsIjoiZmF3emFuMTIzQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoiQWRtaW4iLCJuYW1lIjoiRmF3emFuIiwicGVybWlzc2lvbnMiOnsidXNlciI6eyJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwibGlzdCI6dHJ1ZSwiZGVsZXRlIjp0cnVlfSwicHJvcGVydHkiOnsiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwibGlzdCI6dHJ1ZX19LCJpYXQiOjE2NjgwNzM1NzEsImV4cCI6MTY2ODE1OTk3MX0.Gf6plXjDIVx4anG8pMC_FvHnhq32l0ePG75FLx_noSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/users/636cc7cb547fac62f44d7594",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"636cc7cb547fac62f44d7594"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmNjN2NiNTQ3ZmFjNjJmNDRkNzU5NCIsImVtYWlsIjoiZmF3emFuMTIzQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoiQWRtaW4iLCJuYW1lIjoiRmF3emFuIiwicGVybWlzc2lvbnMiOnsidXNlciI6eyJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwibGlzdCI6dHJ1ZSwiZGVsZXRlIjp0cnVlfSwicHJvcGVydHkiOnsiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwibGlzdCI6dHJ1ZX19LCJpYXQiOjE2NjgwNzM1NzEsImV4cCI6MTY2ODE1OTk3MX0.Gf6plXjDIVx4anG8pMC_FvHnhq32l0ePG75FLx_noSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"xyz\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/636cc7cb547fac62f44d7594",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"636cc7cb547fac62f44d7594"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmNjN2NiNTQ3ZmFjNjJmNDRkNzU5NCIsImVtYWlsIjoiZmF3emFuMTIzQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoiQWRtaW4iLCJuYW1lIjoiRmF3emFuIiwicGVybWlzc2lvbnMiOnsidXNlciI6eyJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwibGlzdCI6dHJ1ZSwiZGVsZXRlIjp0cnVlfSwicHJvcGVydHkiOnsiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwibGlzdCI6dHJ1ZX19LCJpYXQiOjE2NjgwNzM1NzEsImV4cCI6MTY2ODE1OTk3MX0.Gf6plXjDIVx4anG8pMC_FvHnhq32l0ePG75FLx_noSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/users/636ccbd0a363aec6503be1d6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"636ccbd0a363aec6503be1d6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
